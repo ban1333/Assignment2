@@ -9,12 +9,102 @@ namespace PROG2070Assignment2
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter the triangle's First Dimension: ");
-            GetUserInput();
-            Console.Write("Enter the triangle's Second Dimension: ");
-            GetUserInput();
-            Console.Write("Enter the triangle's Third Dimension: ");
-            GetUserInput();
+            bool continueApplication = true;
+
+            do
+            {
+
+                MainMenu();
+                string strUserInput = GetUserInput();
+                int selectedMenuOption = 0;
+                bool isNumber = int.TryParse(strUserInput, out selectedMenuOption);
+
+                if (isNumber)
+                {
+                    //happy path
+                    if (selectedMenuOption > 0 && selectedMenuOption <= 2)
+                    {
+                        //happy path
+                        switch (selectedMenuOption)
+                        {
+                            case 1:
+
+                                Console.Clear();
+                                bool error = false;
+                                strUserInput = "";
+                                int firstDimension = 0;
+                                int secondDimension = 0;
+                                int thirdDimension = 0;
+
+                                do
+                                {
+                                    Console.Write("Enter the triangle's First Dimension: ");
+                                    strUserInput = GetUserInput();
+                                    error = !int.TryParse(strUserInput, out firstDimension);
+                                    if(error)
+                                    {
+                                        error = true;
+                                        Console.WriteLine($"ERROR - {strUserInput} is not a valid number");
+                                    }
+                                    else
+                                    {
+                                        error = false;
+                                    }
+                                } while (error);
+
+                                do
+                                {
+                                    Console.Write("Enter the triangle's Second Dimension: ");
+                                    strUserInput = GetUserInput();
+                                    error = !int.TryParse(strUserInput, out secondDimension);
+                                    if (error)
+                                    {
+                                        error = true;
+                                        Console.WriteLine($"ERROR - {strUserInput} is not a valid number");
+                                    }
+                                    else
+                                    {
+                                        error = false;
+                                    }
+                                } while (error);
+
+                                do
+                                {
+                                    Console.Write("Enter the triangle's Third Dimension: ");
+                                    strUserInput = GetUserInput();
+                                    error = !int.TryParse(strUserInput, out thirdDimension);
+                                    if (error)
+                                    {
+                                        error = true;
+                                        Console.WriteLine($"ERROR - {strUserInput} is not a valid number");
+                                    }
+                                    else
+                                    {
+                                        error = false;
+                                    }
+                                } while (error);
+
+
+
+                                break;
+                            case 2:
+                                continueApplication = false;
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        //sad path
+                        Console.WriteLine($"ERROR - {selectedMenuOption} is not a menu option");
+                    }
+                }
+                else
+                {
+                    //sad path
+                    Console.WriteLine($"ERROR - Valid number not entered");
+                }
+
+            } while (continueApplication);
         }
 
         /// <summary>
@@ -24,6 +114,7 @@ namespace PROG2070Assignment2
         {
             Console.WriteLine("1. Enter triangle dimensions");
             Console.WriteLine("2. Exit");
+            Console.Write("Enter a menu option: ");
         }
 
         /// <summary>
