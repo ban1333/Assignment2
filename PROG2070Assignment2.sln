@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROG2070Assignment2", "PROG2070Assignment2\PROG2070Assignment2.csproj", "{6C32F2B7-8E88-454A-B45F-6EB49DBA06B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROG2070Assignment2.Test", "PROG2070Assignment2.Test\PROG2070Assignment2.Test.csproj", "{A8CD88CA-7F65-4B09-8C39-B525C473CBE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6C32F2B7-8E88-454A-B45F-6EB49DBA06B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C32F2B7-8E88-454A-B45F-6EB49DBA06B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C32F2B7-8E88-454A-B45F-6EB49DBA06B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8CD88CA-7F65-4B09-8C39-B525C473CBE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8CD88CA-7F65-4B09-8C39-B525C473CBE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8CD88CA-7F65-4B09-8C39-B525C473CBE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8CD88CA-7F65-4B09-8C39-B525C473CBE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

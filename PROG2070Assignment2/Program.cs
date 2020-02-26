@@ -13,7 +13,6 @@ namespace PROG2070Assignment2
 
             do
             {
-
                 MainMenu();
                 string strUserInput = GetUserInput();
                 int selectedMenuOption = 0;
@@ -84,7 +83,16 @@ namespace PROG2070Assignment2
                                     }
                                 } while (error);
 
-
+                                string output = TriangleSolver.Analyze(firstDimension, secondDimension, thirdDimension);
+                                if(output == "")
+                                {
+                                    Console.WriteLine("These numbers do not make up a triangle");
+                                }
+                                else
+                                {
+                                    Console.WriteLine($"These number make up {output} triangle");
+                                }
+                                
 
                                 break;
                             case 2:
