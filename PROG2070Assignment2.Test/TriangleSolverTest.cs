@@ -101,7 +101,7 @@ namespace PROG2070Assignment2.Test
         }
 
         [Test]
-        public void Analyze_GivenAndAnd_ResultIs()
+        public void Analyze_Given3And3And4_ResultIsIsosceles()
         {
             //Arrange
             string expectedResult = "";
